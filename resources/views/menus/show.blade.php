@@ -17,10 +17,12 @@ function normalizeText($string)
   return $string;
 }
 
-
 ?>
 
 @section('content')
+<div class="back-button">
+  <a href="/menu">&larr; Back </a>
+</div>
 <h1 class="pageTitle">Menu - {{$burger->name}}</h1>
 <section id="menu">
   <div class="center menu-page-item">

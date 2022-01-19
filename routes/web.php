@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\CartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,9 +22,10 @@ Route::get('/{name}', function () {
 
 Route::get('/menu', [MenuController::class, 'index']);
 Route::post('/menu', [MenuController::class, 'store']);
-Route::get('/order', function () {
-  return view('order');
-});
+Route::get('/order', [OrderController::class, 'index']);
+Route::post('/order', [OrderController::class, 'store']);
+Route::get('/cart', [CartController::class, 'index']);
+Route::delete('/cart/{id}', [CartController::class, 'destroy']);
 Route::get('/menu/create', [MenuController::class, 'create']);
 Route::get('/menu/{id}', [MenuController::class, 'show']);
 Route::delete('/menu/{id}', [MenuController::class, 'destroy']);

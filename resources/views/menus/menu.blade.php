@@ -13,6 +13,7 @@
 <h1 class="pageTitle">Menu</h1>
 <section id="menu">
   <h2 class="center">Menu Items:</h2>
+  <a href="/menu/create">+ Add New Menu Item</a>
   <ul class="menu-list">
     @foreach($burgers as $burger)
     <li>
@@ -31,6 +32,6 @@
 
     @endforeach
   </ul>
-  <a href="/menu/create">+ Add New Menu Item</a>
+
 </section>
 @endsection
