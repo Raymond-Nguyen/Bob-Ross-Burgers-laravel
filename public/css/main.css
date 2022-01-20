@@ -13,6 +13,10 @@ a {
   text-align: center;
 }
 
+.indent {
+  text-indent: 40px;
+}
+
 nav {
   top: 0;
   background-color: #484538;
